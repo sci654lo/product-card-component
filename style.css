@@ -1,0 +1,142 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    min-height: 100vh;
+    width: auto;
+    display: grid;
+    place-items: center;
+    background: var(--cream);
+    font: 500 14px 'Montserrat', sans-serif;
+    padding: 1.875em 1em;
+    margin: 0 auto;
+}
+
+.card {
+    max-width: 344px;
+}
+
+.main-img {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+
+.inner-card {
+    background: var(--white);
+    padding: 1.575em;
+}
+
+.pre-title {
+    color: var(--darkGrayishBlue);
+    text-transform: uppercase;
+    letter-spacing: .375em;
+    margin-bottom: 1em;
+}
+
+.title {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: .75em;
+}
+
+.desc {
+    line-height: 1.5;
+    color: var(--darkGrayishBlue);
+    margin-bottom: 2em;
+}
+
+.new-price {
+    display: block;
+    color: var(--darkCyan);
+    font-size: 2em;
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+
+.old-price {
+    display: block;
+    color: var(--darkGrayishBlue);
+    text-decoration: line-through;    
+    transform: translate(9em, -1.75em);
+
+}
+
+.btn {
+    margin-top: 1.375rem;
+    background: var(--darkCyan);
+    color: var(--white);
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1em 5em;
+    font-weight: 700;
+}
+
+.btn img {
+    display: inline;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: var(--veryDarkBlue);
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 1440px){
+
+    html {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        display: grid;
+        place-items: center;
+        margin: 4em auto;
+        min-height: 100vh;
+
+
+    }
+
+    .card {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 600px;
+
+    }
+
+    .main-img {
+        
+        border-radius: 8px 0 0 8px;
+    }
+
+    .inner-card {
+        padding: 1.75em;
+        border-radius: 0 8px 8px 0;
+        max-width: 300px;
+        height: 450px;
+    }
+
+    .old-price {
+        transform: translate(50%, -1.75em);
+    }
+
+}
